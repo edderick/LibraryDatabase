@@ -1,0 +1,32 @@
+@startuml img/objects03.png
+
+object Reader{
+	id
+	name
+	booklimit
+}
+
+object Book{
+	id
+	title
+	author
+	type
+}
+
+object Loan{
+	bookid
+	readerid
+}
+
+object Reservation{
+	bookid
+	readerid
+	timestamp
+}
+
+Loan -- Book
+Loan -- Reader
+
+Reservation -- Book
+Reservation -- Reader
+@enduml
